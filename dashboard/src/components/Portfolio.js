@@ -176,7 +176,7 @@ const Portfolio = () => {
       </div>
 
       
-      <div style={{ 
+      <div className="portfolio-main-card" style={{ 
         background: "linear-gradient(135deg, #000666 0%, #1a237e 100%)", 
         padding: "40px", borderRadius: "24px", color: "#fff",
         boxShadow: "0 20px 40px rgba(0,6,102,0.15)",
@@ -190,7 +190,7 @@ const Portfolio = () => {
           <p style={{ margin: 0, fontSize: "14px", fontWeight: "500", opacity: 0.8, textTransform: "uppercase", letterSpacing: "1px" }}>Total Net Worth</p>
           <h2 style={{ margin: "10px 0 30px 0", fontSize: "42px", fontWeight: "700", letterSpacing: "-1px" }}>₹{current.netWorth}</h2>
           
-          <div style={{ display: "flex", gap: "60px" }}>
+          <div className="networth-info" style={{ display: "flex", gap: "60px" }}>
             <div>
               <p style={{ margin: "0 0 5px 0", fontSize: "12px", opacity: 0.8 }}>Invested Capital</p>
               <h4 style={{ margin: 0, fontSize: "18px", fontWeight: "600" }}>₹{current.invested}</h4>
@@ -207,7 +207,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex", gap: "30px", marginBottom: "40px" }}>
+      <div className="portfolio-stats-row" style={{ display: "flex", gap: "30px", marginBottom: "40px" }}>
         
         <div style={{ flex: 2, backgroundColor: "var(--card-bg)", borderRadius: "20px", padding: "30px", border: "1px solid var(--border-subtle)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "30px" }}>
@@ -215,8 +215,8 @@ const Portfolio = () => {
             <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "700", color: "var(--text-main)" }}>Asset Allocation</h3>
           </div>
           
-          <div style={{ display: "flex", gap: "40px", alignItems: "center" }}>
-            <div style={{ width: "220px" }}>
+          <div className="asset-alloc-row" style={{ display: "flex", gap: "40px", alignItems: "center" }}>
+            <div className="asset-alloc-chart" style={{ width: "220px" }}>
               <DoughnutChart data={assetData} options={chartOptions} />
             </div>
             <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
@@ -258,7 +258,7 @@ const Portfolio = () => {
 
       {/* Top Performers Section */}
       <h3 style={{ fontSize: "18px", fontWeight: "700", marginBottom: "20px" }}>Top Performing Assets</h3>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "20px", paddingBottom: "50px" }}>
+      <div className="responsive-grid-mobile" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "20px", paddingBottom: "50px" }}>
         {current.top.map((s) => (
           <TopPerformer key={s.name} name={s.name} price={s.price} change={s.change} icon={TrendingUp} color="#000666" />
         ))}
