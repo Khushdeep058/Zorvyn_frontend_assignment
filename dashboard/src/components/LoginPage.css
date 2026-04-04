@@ -266,3 +266,48 @@
   25% { transform: translateX(-4px); }
   75% { transform: translateX(4px); }
 }
+
+/* 🚀 Mobile Optimization for Login */
+@media (max-width: 768px) {
+  .login-branding-container {
+    top: 1rem !important;
+    left: 1rem !important;
+    gap: 10px !important;
+  }
+  .login-logo-box {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+  }
+  .login-brand-name {
+    font-size: 1.3rem !important;
+  }
+  .login-card-anchor {
+    margin-top: 3.5rem !important;
+    width: 92% !important;
+  }
+  .login-card-content {
+    padding: 1.8rem 1.2rem !important;
+  }
+  .login-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
+  }
+  .role-tab-btn {
+    padding: 8px 5px !important;
+    font-size: 0.75rem !important;
+  }
+  .btn-login-v5 {
+    padding: 14px !important;
+    font-size: 0.95rem !important;
+  }
+  .login-footer-v5 {
+    bottom: 1rem !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
