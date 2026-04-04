@@ -63,9 +63,9 @@ const Funds = () => {
 
   return (
     <div style={{ padding: "0 30px", backgroundColor: "var(--bg-primary)", minHeight: "100vh", fontFamily: "'Inter', sans-serif" }}>
-      <div style={{ display: "flex", gap: "40px", paddingTop: "30px" }}>
+      <div className="funds-layout" style={{ display: "flex", gap: "40px", paddingTop: "30px" }}>
         
-        <div style={{ flex: "0 0 260px" }}>
+        <div className="funds-sidebar" style={{ flex: "0 0 260px" }}>
            <div style={{ border: "1px solid var(--border-subtle)", borderRadius: "12px", padding: "10px", marginBottom: "30px", backgroundColor: "var(--card-bg)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", padding: "12px 15px", backgroundColor: "var(--bg-secondary)", borderRadius: "8px", cursor: "pointer", marginBottom: "5px" }}>
                 <DashboardOutlined style={{ color: "#ff5722", fontSize: "20px" }} />
@@ -113,7 +113,7 @@ const Funds = () => {
             <h3 style={{ fontSize: "18px", fontWeight: "600", color: "var(--text-main)", margin: "0 0 8px 0" }}>Get started</h3>
             <p style={{ fontSize: "14px", color: "var(--text-dim)", margin: "0 0 24px 0" }}>Find the right mutual funds for you across these categories</p>
             
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "20px" }}>
+            <div className="responsive-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "20px" }}>
               <CategoryBox label="Equity" />
               <CategoryBox label="Fund of Funds" />
               <CategoryBox label="Index funds" />
@@ -127,7 +127,7 @@ const Funds = () => {
             <h3 style={{ fontSize: "18px", fontWeight: "600", color: "var(--text-main)", margin: "0 0 8px 0" }}>Categories</h3>
             <p style={{ fontSize: "14px", color: "var(--text-dim)", margin: "0 0 24px 0" }}>Explore curated categories for specific financial goals</p>
             
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+            <div className="responsive-flex" style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
               <DetailedCard 
                 icon={CardGiftcardOutlined} 
                 title="Save taxes" 
