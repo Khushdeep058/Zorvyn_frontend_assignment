@@ -935,3 +935,117 @@ hr {
 .dark-mode .index, .dark-mode .percent { color: #94a3b8 !important; }
 .dark-mode .index-points { color: #ff5252 !important; }
 .dark-mode .menu-container { background-color: transparent !important; }
+
+
+/* ============================================================
+   📱 UNIVERSAL RESPONSIVENESS & ADAPTABILITY
+   ============================================================ */
+
+/* Base fluid layout adjustments */
+.dashboard-container {
+  min-height: 90vh;
+  height: auto;
+  align-items: flex-start;
+}
+
+/* Tablet & Smaller Desktops (992px to 1200px) */
+@media (max-width: 1200px) {
+  .menus li {
+    margin-right: 15px;
+  }
+}
+
+/* Mobile & Tablet (max 991px) */
+@media (max-width: 991px) {
+  .dashboard-container {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .watchlist-container {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    height: 380px !important;
+    border-right: none !important;
+    border-bottom: 2px solid var(--border-subtle);
+    order: 2;
+  }
+
+  .content {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    padding: 24px 16px !important;
+    order: 1;
+    overflow-y: visible !important;
+  }
+
+  /* Navigation & Header */
+  .topbar-container {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .indices-container {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    justify-content: center !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-subtle);
+    gap: 20px;
+  }
+
+  .menu-container {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    flex-basis: 100% !important;
+    padding: 15px 10px !important;
+  }
+
+  .menus {
+    width: 100%;
+    overflow-x: auto;
+    padding: 5px 0;
+  }
+
+  .menus ul {
+    white-space: nowrap;
+    display: flex;
+    padding: 0 10px;
+  }
+
+  .menus li {
+    margin-right: 20px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Section Fixes */
+  .summary-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .data-summary {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+  }
+
+  .data-summary hr {
+    display: none !important;
+  }
+
+  .watchlist-number {
+    width: 100% !important;
+    position: relative !important;
+    bottom: 0 !important;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .indices-container { font-size: 11px; }
+  .menus li p { font-size: 12px !important; }
+  .content { padding: 15px 10px !important; }
+}
