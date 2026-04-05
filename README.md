@@ -1,5 +1,4 @@
 # Zorvyn_frontend_assignment
-#  Zorvyn Finance Terminal
 
 ### A High-Fidelity, Professional-Grade Trading Console
 
